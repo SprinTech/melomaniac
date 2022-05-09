@@ -18,7 +18,7 @@ class AuthURL(APIView):
         scopes = 'playlist-read-private user-read-private user-read-email'
 
         url = Request('GET', 'https://accounts.spotify.com/authorize', params={
-            'scopes': scopes,
+            'scope': scopes,
             'response_type': 'code',
             'redirect_uri': REDIRECT_URI,
             'client_id': CLIENT_ID

@@ -1,5 +1,5 @@
 from django.db import models
-from .models import User
+from backend.users.models import User
 
 class Song(models.Model):
     class AudioFormat(models.TextChoices):
