@@ -48,7 +48,7 @@ def spotify_callback(request, format=None):
         request.session.create()
 
     create_or_update_user_tokens(request.session.session_key, access_token, refresh_token, token_type, expires_in)
-    return redirect('/api/users/')
+    return redirect('/is-authenticated')
 
 class IsAuthenticated(APIView):
     def get(self, request, format=None):

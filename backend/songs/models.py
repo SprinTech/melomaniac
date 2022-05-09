@@ -1,7 +1,6 @@
 from django.db import models
-from users.models import User
-    
-# Create your models here.
+from .models import User
+
 class Song(models.Model):
     class AudioFormat(models.TextChoices):
         Spotify = "Spotify"

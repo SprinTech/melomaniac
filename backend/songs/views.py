@@ -1,9 +1,15 @@
-from rest_framework import viewsets, serializers
+from .serializers import SongSerializer
 from .models import Song
+from rest_framework.generics import RetrieveAPIView, ListAPIView, CreateAPIView
 
-class SongSerializer(serializers.ModelSerializer):
-    created_at = serializers.DateTimeField(format="%d-%m-%Y %H:%M:%S", required=False)
-    
-    class Meta:
-        model = Song
-        fields = '__all__'
+class SongDetail(RetrieveAPIView):
+    queryset = Song.objects.all()
+    serializer_class = SongSerializer
+
+class SongList(ListAPIView):
+    queryset = Song.objects.all()
+    serializer_class = SongSerializer
+
+class SongCreate(CreateAPIView):
+    queryset = Song.objects.all()
+    serializer_class = SongSerializer
