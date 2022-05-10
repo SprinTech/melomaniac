@@ -24,7 +24,7 @@ const NavBarComponent = ({ isLogged }) => {
                         </NavDropdown>
                         <Nav.Link href="#" disabled>Link</Nav.Link>
                     </Nav>
-                    { !isLogged && <Login />}
+                    {/* { !isLogged && <Login />} */}
                     {/* <Form className="d-flex">
                         <FormControl
                             type="search"
@@ -39,5 +39,5 @@ const NavBarComponent = ({ isLogged }) => {
         </Navbar>
     );
 }
-    
+
 export default NavBarComponent;

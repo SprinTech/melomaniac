@@ -23,7 +23,7 @@ module.exports = {
                 ]
             }
         ],
-       
+
     },
     resolve: {
         extensions: ['*', '.js', '.jsx', '.css'],
@@ -31,11 +31,11 @@ module.exports = {
             "fs": false,
             "os": false,
             "path": false
-          },
+        },
     },
     plugins: [
         htmlPlugin,
         new Dotenv()
     ],
-    
+
 };
